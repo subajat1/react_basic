@@ -7,7 +7,7 @@ export class Home extends React.Component {
         this.state = {
             age: props.initAge,
             status: 0,
-            homeLink: this.props.initialLinkName
+            homeLink: props.initialLinkName
         };
         setTimeout(() => {
             this.setState({
