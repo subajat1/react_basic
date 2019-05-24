@@ -7,7 +7,12 @@ export class Home extends React.Component {
         this.state = {
             age: props.initAge,
             status: 0
-        }
+        };
+        setTimeout(() => {
+            this.setState({
+                status: 1
+            });
+        }, 3000);
     }
 
     onMakeOlder() {
@@ -20,9 +25,9 @@ export class Home extends React.Component {
         return (
             <div>
                 <p>In a new Component!</p>
-                <p>Name : {this.props.name}</p>
-                <p>Age  : {this.state.age}</p>
-                <p>STatus: {this.state.status}</p>
+                <p>Name   : {this.props.name}</p>
+                <p>Age    : {this.state.age}</p>
+                <p>Status : {this.state.status}</p>
                 <br/>
                 <button onClick={ this.onMakeOlder.bind(this) } className="btn btn-primary">Make older!</button>
             </div>
